@@ -1,0 +1,291 @@
+/* CSS Variables for Colors */
+:root {
+  --primary-blue: #a6dcef;
+  --mint: #b8e9c0;
+  --lavender: #eae8ff;
+  --white: #ffffff;
+  --dark-mode-bg: #2c2c2c;
+  --dark-mode-text: #eae8ff;
+  --dark-mode-accent: #a6dcef;
+}
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--white), var(--lavender));
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--primary-blue);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.5em;
+  margin: 0;
+  color: var(--white);
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: var(--mint);
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background: var(--lavender);
+  transform: scale(1.05);
+}
+
+.section {
+  display: none;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teleport-effect {
+  animation: simple-fade 0.3s ease-in-out;
+}
+
+@keyframes simple-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Geser 20px ke bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+  }
+}
+
+.music {
+  position: fixed;
+  bottom: 10px; /* Dipindahkan lebih ke bawah untuk bagian footer tengah, sesuaikan jika footer Anda memiliki tinggi tertentu */
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--lavender);
+  border: none;
+  padding: 8px 16px; /* Padding diperkecil sedikit untuk ukuran tombol lebih kecil */
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em; /* Font-size diperkecil sedikit dari 1.2em ke 1em */
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.text,
+.activity {
+  flex: 1;
+  min-width: 300px;
+}
+
+.activity {
+  background: var(--mint);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--lavender);
+}
+
+.quiz,
+.game {
+  margin-top: 20px;
+}
+
+.fact {
+  background: var(--lavender);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+footer {
+  background: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--mint);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/* Video Container */
+.video-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+#smart-quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.explanation {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+#check-smart-answers {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+}
+
+#check-smart-answers:hover {
+  background: #45a049;
+}
+
+#smart-results {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 10px 0;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
